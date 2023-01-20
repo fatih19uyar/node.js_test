@@ -1,1 +1,9 @@
-console.log('Test 20.01.2023');
+const http = require('http');
+
+const routers = require('./routes');
+
+console.log(routers.someText);
+
+const server = http.createServer(routers.handler);
+
+server.listen(3000);
